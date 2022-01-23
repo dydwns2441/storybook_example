@@ -7,7 +7,7 @@ export type ListProps = {
   list: string[];
 };
 
-export const Container = styled.div<{ direction: string; size: string }>`
+const Container = styled.div<{ direction: string; size: string }>`
   display: flex;
   flex-direction: ${({ direction }) =>
     direction === "row" ? "row" : "column"};
@@ -28,7 +28,6 @@ const List = (props: ListProps) => {
     <Container direction={props.direction} size={props.size}>
       {props.list &&
         props.list.map((el) => {
-          // console.log("el::", el);
           return (
             <li
               key={el}

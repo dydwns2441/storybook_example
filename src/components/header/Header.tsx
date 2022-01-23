@@ -4,6 +4,10 @@ import Button from "../common/Button";
 import List from "../common/List";
 import Logo from "../common/Logo";
 
+export type HeaderProps = {
+    handleModal:()=>boolean;
+}
+
 const HeaderContainer = styled.header`
   width: 100vw;
   padding: 20px 0;
@@ -49,7 +53,7 @@ const Header = (props: { handleModal: () => boolean }) => {
           onClick={(e: string) => {
             console.log(e);
           }}
-          list={["제품 특장점", "신규가입 혜택", "자주 묻는 질문"]}
+          list={["제품 특장점", "신규가입 혜택", "자주 묻는 질문"] as string[]}
         />
 
         <Button
