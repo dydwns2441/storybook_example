@@ -1,20 +1,12 @@
-import React, { FC } from "react";
+import React from "react";
 import Button from "../common/Button";
 
-interface IHeaderProps {}
-
-const Header: FC<IHeaderProps> = () => {
+const Header = () => {
   return (
     <>
       <header>
         <nav>
-          <Button
-            onClick={() => {
-              console.log("버튼ㅌㅌㅌ");
-            }}
-          >
             버튼튼튼
-          </Button>
         </nav>
       </header>
     </>
