@@ -4,15 +4,16 @@ import { GlobalStyle } from "./components/GlobalStyle";
 import Modal from "./components/common/Modal";
 function App() {
     const [modal, setModal] = useState(false);
-    const handleModal = (prevState:boolean) => setModal(!prevState);
-
+    const handleModal = () => setModal((prevState) => !prevState);
   return (
     <>
       <GlobalStyle />
       <div className="App">
-        <Header />
+        <Header handleModal={handleModal as ()=>boolean}/>
       </div>
         {modal ? <Modal handleModal={handleModal as ()=> boolean} /> : null}
-    </>)}
+    </>
+  )
+};
 
 export default App;

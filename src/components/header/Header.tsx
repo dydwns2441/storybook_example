@@ -13,7 +13,8 @@ const HeaderContainer = styled.header`
   background-color: rgb(236, 241, 255);
 `;
 
-const Header = () => {
+const Header = (props:{handleModal:()=>boolean}) => {
+
   return (
     <>
       <HeaderContainer>
@@ -35,9 +36,7 @@ const Header = () => {
         <Button
           size={"medium"}
           theme={"primary"}
-          onClick={() => {
-            "click event!";
-          }}
+          onClick={props.handleModal}
           // disabled
         >
           LOG IN

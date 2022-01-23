@@ -89,7 +89,7 @@ const Button = ({
         theme={theme}
         disabled={disabled as boolean}
         {...props}
-        onClick={() => alert("asdf")}
+        onClick={onClick}
           width={width as number}
       >
         {children}
