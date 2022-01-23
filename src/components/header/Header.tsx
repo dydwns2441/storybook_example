@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import Button from "../common/Button/Button";
+import Button from "../common/Button";
 
 interface IHeaderProps {}
 
