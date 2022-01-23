@@ -6,7 +6,8 @@ export interface ButtonProps {
   disabled?: boolean;
   size?: "small" | "medium" | "large";
   theme?: "primary" | "secondary" | "warning" | "cancle";
-  onClick: () => void;
+  onClick: () => boolean;
+  width?:number
 }
 
 const THEMES: any = {
@@ -32,6 +33,7 @@ const Container = styled.button<{
   size: string;
   theme: string;
   disabled: boolean;
+  width: number
 }>`
   background-color: ${({ theme }) =>
     theme ? (THEMES[theme].background as string) : "none"};
@@ -59,6 +61,7 @@ const Button = ({
   size,
   onClick,
   disabled,
+    width,
   ...props
 }: ButtonProps) => {
   return (
@@ -69,6 +72,7 @@ const Button = ({
         disabled={disabled as boolean}
         {...props}
         onClick={() => alert("asdf")}
+          width={width as number}
       >
         {children}
       </Container>
