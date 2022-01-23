@@ -9,8 +9,8 @@ export type logoProps = {
 const Logo = (props: logoProps) => {
   return (
     <svg
-      width={props.size === "small" ? 150 : props.size === "medium" ? 220 : 280}
-      height={props.size === "small" ? 55 : props.size === "medium" ? 80 : 102}
+      width={props.size === "small" ? 80 : props.size === "medium" ? 100 : 200}
+      height={props.size === "small" ? 26 : props.size === "medium" ? 40 : 82}
       viewBox="0 0 280 102"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

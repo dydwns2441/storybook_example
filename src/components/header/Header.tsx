@@ -10,8 +10,7 @@ const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #ecf0ff;
-  /* border: 3px solid; */
+  background-color: rgb(236, 241, 255);
 `;
 
 const Header = () => {
@@ -19,7 +18,7 @@ const Header = () => {
     <>
       <HeaderContainer>
         <Logo
-          size={"small"}
+          size={"medium"}
           onClick={() => {
             console.log("logo");
           }}
@@ -27,8 +26,8 @@ const Header = () => {
         <List
           size={"medium"}
           direction={"row"}
-          onClick={() => {
-            console.log("click list");
+          onClick={(e: string) => {
+            console.log(e);
           }}
           list={["제품 특장점", "신규가입 혜택", "자주 묻는 질문"]}
         />
@@ -39,6 +38,7 @@ const Header = () => {
           onClick={() => {
             "click event!";
           }}
+          // disabled
         >
           LOG IN
         </Button>

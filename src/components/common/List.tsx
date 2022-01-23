@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export type ListProps = {
   size: "small" | "medium" | "large";
-  onClick: () => void;
+  onClick: (e: string) => void;
   direction: "row" | "column";
   list: string[];
 };
@@ -28,8 +28,14 @@ const List = (props: ListProps) => {
     <Container direction={props.direction} size={props.size}>
       {props.list &&
         props.list.map((el) => {
+          console.log("el::", el);
           return (
-            <li key={el} onClick={props.onClick}>
+            <li
+              key={el}
+              onClick={() => {
+                props.onClick(el as string);
+              }}
+            >
               {el}
             </li>
           );

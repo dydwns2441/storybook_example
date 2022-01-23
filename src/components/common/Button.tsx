@@ -11,11 +11,11 @@ export interface ButtonProps {
 
 const THEMES: any = {
   primary: {
-    background: "#00498c",
+    background: "#2058aa",
     color: "#fff",
   },
   secondary: {
-    background: "#396EB0",
+    background: "#4371aa",
     color: "#fff",
   },
   warning: {
@@ -43,7 +43,8 @@ const Container = styled.button<{
   font-weight: 700;
   border: none;
   border-radius: 10px;
-  cursor: ${({ disabled }) => (disabled ? "auto" : "pointer")};
+  transition: all 0.3s;
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   &:hover {
     opacity: 0.7;
   }
@@ -67,6 +68,7 @@ const Button = ({
         theme={theme}
         disabled={disabled as boolean}
         {...props}
+        onClick={() => alert("asdf")}
       >
         {children}
       </Container>
