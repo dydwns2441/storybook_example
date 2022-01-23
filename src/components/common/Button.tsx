@@ -47,6 +47,8 @@ const Container = styled.button<{
   border-radius: 10px;
   transition: all 0.3s;
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  width: ${({width}) => width ? `${width}px`: 'auto'};
+  
   &:hover {
     opacity: 0.7;
   }
@@ -55,6 +57,22 @@ const Container = styled.button<{
   }
 `;
 
+/**
+ * Button
+ * - size 가이드
+ *   - 'small' : font: 10px, padding: 6px
+ *   - 'medium' | 'large'
+ *
+ *
+ * @param children
+ * @param theme
+ * @param size
+ * @param onClick
+ * @param disabled
+ * @param width
+ * @param props
+ * @constructor
+ */
 const Button = ({
   children,
   theme,

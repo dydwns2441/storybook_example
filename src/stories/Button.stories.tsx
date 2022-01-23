@@ -15,8 +15,8 @@ export default {
 const Template: Story<ButtonProps> = (args) => {
   return <Button {...args} />;
 };
-export const Primary = Template.bind({});
-Primary.args = {
+export const button = Template.bind({});
+button.args = {
   size: "small",
   theme: "primary",
   children: "추가하기",

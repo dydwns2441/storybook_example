@@ -15,5 +15,4 @@ function App() {
         {modal ? <Modal handleModal={handleModal as ()=> boolean} /> : null}
     </>)}
 
-
 export default App;
