@@ -20,12 +20,12 @@ const THEMES: any = {
     color: "#fff",
   },
   warning: {
-    background: "#FFDEDF",
+    background: "#ff5050",
     color: "#fff",
   },
   cancle: {
     background: "gray",
-    color: "##8b8b8b",
+    color: "#8b8b8b",
   },
 };
 
@@ -34,7 +34,7 @@ const Container = styled.button<{
   theme: string;
   disabled: boolean;
 }>`
-  background: ${({ theme }) =>
+  background-color: ${({ theme }) =>
     theme ? (THEMES[theme].background as string) : "none"};
   color: ${({ theme }) => (theme ? (THEMES[theme].color as string) : "none")};
   padding: ${({ size }) =>
