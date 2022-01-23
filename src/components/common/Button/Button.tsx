@@ -24,7 +24,7 @@ const THEMES: any = {
     color: "#fff",
   },
   cancle: {
-    background: "gray",
+    background: "#d1d1d1",
     color: "#8b8b8b",
   },
 };
