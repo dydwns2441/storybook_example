@@ -1,14 +1,25 @@
 import React from "react";
-import Button from "../common/Button";
+import styled from "styled-components";
+import Logo from "../common/Logo";
+
+const HeaderContainer = styled.header`
+  width: 100vw;
+  border: 3px solid;
+`;
 
 const Header = () => {
   return (
     <>
-      <header>
+      <HeaderContainer>
         <nav>
-            버튼튼튼
+          <Logo
+            size={"small"}
+            onClick={() => {
+              console.log("logo");
+            }}
+          />
         </nav>
-      </header>
+      </HeaderContainer>
     </>
   );
 };

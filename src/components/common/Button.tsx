@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 export interface ButtonProps {
   children: string;
-  primary?: boolean;
   disabled?: boolean;
   size?: "small" | "medium" | "large";
   theme?: "primary" | "secondary" | "warning" | "cancle";
@@ -55,7 +54,6 @@ const Container = styled.button<{
 
 const Button = ({
   children,
-  primary = false,
   theme,
   size,
   onClick,
