@@ -23,7 +23,7 @@ const THEMES: any = {
     background: "#FFDEDF",
     color: "#fff",
   },
-  cancle: {
+  cancel: {
     background: "gray",
     color: "##8b8b8b",
   },
