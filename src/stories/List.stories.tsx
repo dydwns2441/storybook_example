@@ -3,7 +3,7 @@ import {Meta, Story} from "@storybook/react";
 
 
 export default {
-    title: 'component/common/List',
+    title: 'components/common/List',
     component: List,
     argTypes: {
         size: {
