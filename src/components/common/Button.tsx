@@ -7,7 +7,7 @@ export interface ButtonProps {
   size?: "small" | "medium" | "large";
   theme?: "primary" | "secondary" | "warning" | "cancle";
   onClick: () => boolean;
-  width?:number
+  width?: number;
 }
 
 const THEMES: any = {
@@ -33,7 +33,7 @@ const Container = styled.button<{
   size: string;
   theme: string;
   disabled: boolean;
-  width: number
+  width: number;
 }>`
   background-color: ${({ theme }) =>
     theme ? (THEMES[theme].background as string) : "none"};
@@ -47,8 +47,8 @@ const Container = styled.button<{
   border-radius: 10px;
   transition: all 0.3s;
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
-  width: ${({width}) => width ? `${width}px`: 'auto'};
-  
+  width: ${({ width }) => (width ? `${width}px` : "auto")};
+
   &:hover {
     opacity: 0.7;
   }
@@ -58,10 +58,25 @@ const Container = styled.button<{
 `;
 
 /**
- * Button
- * - size 가이드
- *   - 'small' : font: 10px, padding: 6px
- *   - 'medium' | 'large'
+ * - <b>size 가이드</b>
+ *   - small : font: 10px, padding: 6px
+ *   - medium : font: 15px, padding: 10px
+ *   - large : font: 20px, padding: 20px
+ *
+ * - <b>theme 가이드</b>
+ *   - primary : background: #2058aa, color: #fff
+ *   - secondary : background: #4371aa, color: #fff
+ *   - warning : background: #ff5050, color: #fff
+ *   - cancle : background: #d1d1d1, color: #8b8b8b
+ *
+ * - <b>disabled 가이드</b>
+ *   - true (not allowed) / false
+ *
+ * - <b>children 가이드</b>  : 입력값에 따른 버튼상태 확인 가능.
+ *
+ * - <b>width 가이드 </b>: 속성값으로 width 전달 시, custom 크기 설정 가능.
+ *
+ * - <b>onClick 가이드 </b>: props 로 전달받은 event handling.
  *
  *
  * @param children
@@ -79,7 +94,7 @@ const Button = ({
   size,
   onClick,
   disabled,
-    width,
+  width,
   ...props
 }: ButtonProps) => {
   return (
@@ -90,7 +105,7 @@ const Button = ({
         disabled={disabled as boolean}
         {...props}
         onClick={onClick}
-          width={width as number}
+        width={width as number}
       >
         {children}
       </Container>

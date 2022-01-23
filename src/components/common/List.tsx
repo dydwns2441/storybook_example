@@ -28,7 +28,7 @@ const List = (props: ListProps) => {
     <Container direction={props.direction} size={props.size}>
       {props.list &&
         props.list.map((el) => {
-          console.log("el::", el);
+          // console.log("el::", el);
           return (
             <li
               key={el}

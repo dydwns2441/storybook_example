@@ -2,8 +2,8 @@ import styled from "styled-components";
 import Button from "./Button";
 
 export type ModalProps = {
-    handleModal: () => boolean;
-}
+  handleModal: () => boolean;
+};
 
 const Overlay = styled.div`
   z-index: 1;
@@ -15,7 +15,6 @@ const Overlay = styled.div`
   background: darkgrey;
   opacity: 0.7;
 `;
-
 
 const Container = styled.div`
   position: fixed;
@@ -40,65 +39,55 @@ const Container = styled.div`
   > span {
     text-align: center;
 
-    > h1, h2 {
+    > h1,
+    h2 {
       margin-bottom: 20px;
     }
   }
-
 `;
 
 const Modal = (props: ModalProps) => {
-
-    return (
+  return (
+    <div>
+      <Container>
+        <span>
+          <h1>모달입니다.</h1>
+          <h2>모달입니다.</h2>
+        </span>
         <div>
-            <Container>
-<span>
-                        <h1>
-                            모달입니다.
-                        </h1>
-                        <h2>
-                            모달입니다.
-                        </h2>
-</span>
-                <div>
-                    <Button
-                        children='확인'
-                        theme='secondary'
-                        onClick={props.handleModal}
-                        size='medium'
-                        width={150}
-                    />
-                    <Button
-                        children='확인'
-                        theme='warning'
-                        onClick={props.handleModal}
-                        size='medium'
-                        width={150}
-                    />
-                    <Button
-                        children='확인'
-                        theme='cancle'
-                        onClick={props.handleModal}
-                        size='medium'
-                        width={150}
-                    />
-                    <Button
-                        children='확인'
-                        theme='primary'
-                        onClick={props.handleModal}
-                        size='medium'
-                        width={150}
-                    />
-                </div>
-
-
-            </Container>
-            <Overlay/>
-
+          <Button
+            children="확인"
+            theme="secondary"
+            onClick={props.handleModal}
+            size="medium"
+            width={150}
+          />
+          <Button
+            children="확인"
+            theme="warning"
+            onClick={props.handleModal}
+            size="medium"
+            width={150}
+          />
+          <Button
+            children="확인"
+            theme="cancle"
+            onClick={props.handleModal}
+            size="medium"
+            width={150}
+          />
+          <Button
+            children="확인"
+            theme="primary"
+            onClick={props.handleModal}
+            size="medium"
+            width={150}
+          />
         </div>
-
-
-    )
-}
+      </Container>
+      <Overlay />
+    </div>
+  );
+};
 
 export default Modal;
